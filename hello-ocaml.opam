@@ -1,0 +1,18 @@
+opam-version: "1.2"
+name: "hello-ocaml"
+version: "~unknown"
+maintainer: "Bayu Aldi Yansyah <bayualdiyansyah@gmail.com>"
+authors: "Bayu Aldi Yansyah <bayualdiyansyah@gmail.com>"
+homepage: "https://github.com/pyk/hello-ocaml"
+bug-reports: ""
+license: ""
+dev-repo: "https://github.com/pyk/hello-ocaml"
+build: [
+  ["./configure" "--prefix=%{prefix}%"]
+  [make]
+]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "hello-ocaml"]
+depends: [
+  "ocamlfind" {build}
+]
